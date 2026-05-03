@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Các bé mèo — Mèo Café</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-brand" href="index.html">
+    <div class="nav-dot"></div>
+    <span class="nav-name">Mèo Café</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="menu.html">Thực đơn</a></li>
+    <li><a href="cats.html" class="active">Các bé mèo</a></li>
+    <li><a href="adopt.html">Hướng dẫn nhận nuôi</a></li>
+    <li><a href="policy.html">Nội quy quán</a></li>
+    <li><a href="donate.html" class="nav-link-donate">Ủng hộ</a></li>
+  </ul>
+  <button class="nav-cta">Đặt bàn</button>
+</nav>
+
+<div class="page-hero">
+  <div class="section-label">Các bé mèo</div>
+  <h1 class="page-hero-title">Tìm người bạn đồng hành</h1>
+  <p class="page-hero-sub">Mỗi bé đều có cá tính riêng và đang chờ được yêu thương. Lọc theo tình trạng hoặc tìm theo tên để gặp bé phù hợp với bạn.</p>
+</div>
+
+<section class="section">
+  <div class="cat-controls">
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('all', this)">Tất cả</button>
+      <button class="filter-btn" onclick="setFilter('adopt', this)">Sẵn sàng nhận nuôi</button>
+      <button class="filter-btn" onclick="setFilter('foster', this)">Cần nhà tạm</button>
+    </div>
+    <div class="sort-wrap">
+      <span class="sort-label">Sắp xếp:</span>
+      <select class="sort-select" onchange="setSort(this.value)">
+        <option value="name">Tên A–Z</option>
+        <option value="age-asc">Tuổi trẻ nhất</option>
+        <option value="age-desc">Tuổi lớn nhất</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="cats-count" id="cats-count"></div>
+  <div class="cat-grid" id="cat-grid"></div>
+  <div class="pagination" id="pagination"></div>
+</section>
+
+<footer class="footer">
+  <div>
+    <div class="footer-name">Mèo Café</div>
+    <div class="footer-info">
+      123 Đường Hoa Phượng, Quận 3, TP. Hồ Chí Minh<br>
+      Mở cửa mỗi ngày · 8:00 – 21:00 · 0909 123 456
+    </div>
+  </div>
+  <div class="footer-links">
+    <a href="#" class="footer-link">Facebook</a>
+    <a href="#" class="footer-link">Instagram</a>
+    <a href="#" class="footer-link">Zalo</a>
+  </div>
+</footer>
+
+<script src="js/cats-data.js"></script>
+<script src="js/cats.js"></script>
+</body>
+</html>
